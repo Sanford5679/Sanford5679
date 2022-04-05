@@ -1,0 +1,123 @@
+package iTS275;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.awt.*;   
+
+public class SwitchDemoFallThrough {
+public static void main(String[] args) {
+    java.util.ArrayList<String> futureTeams =
+        new java.util.ArrayList<String>();
+
+    String Whales = null;
+    String Gophers= null;
+    String Penguins= null;
+    String Wolves= null;
+    String Ducks = null;
+    String rhinos= null;
+    
+  int teams = 3;
+  String team1 = null; 
+	String team2 = null;
+	String team3;
+	
+	// Constant because there should always be four players per team
+	final int teamSize = 4; 
+	
+	// Create a Scanner object for keyboard input as in the exercises we did 
+	Scanner keyboard = new Scanner(System.in); 
+	
+	// Create an ArrayList to hold some names.
+    ArrayList<String> Team1 = new ArrayList<String>();
+    ArrayList<String> Team2 = new ArrayList<String>();
+    ArrayList<String> Team3 = new ArrayList<String>();
+    
+
+    
+    // Team 1 .
+    Team1.add("James");
+    Team1.add("Catherine");
+    
+    
+
+    // Display the size of the ArrayList.
+    System.out.println("Team 1: ");
+    
+
+    // Now display the items in nameList.
+    for (int index = 0; index < Team1.size(); index++)
+       System.out.println(Team1.get(index));				
+    	 System.out.print(System.lineSeparator());
+    
+    // Team 2 .
+    Team2.add("Mike");
+    Team2.add("Ed");
+    
+    
+    
+    // Display the size of the ArrayList.
+    System.out.println("Team 2:");
+    for (int index = 0; index < Team2.size(); index++)
+        System.out.println(Team2.get(index));
+        System.out.print(System.lineSeparator());
+    
+    
+ // Team 3 .
+    Team3.add("Sarah");
+    Team3.add("Daniel");
+    
+    
+    
+ // Display the size of the ArrayList.
+    System.out.println("Team 3:");
+
+    for (int index = 0; index < Team3.size(); index++)
+        System.out.println(Team3.get(index));
+        System.out.print(System.lineSeparator());
+    
+        { 
+	
+    switch (teams) {
+        case 1:  System.out.println("Badgers");
+        case 2:  futureTeams.add("Gophers");
+        case 3:  futureTeams.add("Whales");
+        case 4:  futureTeams.add("Penguins");
+        case 5:  futureTeams.add("Wolves");
+        case 6: futureTeams.add("Ducks");
+        case 7: futureTeams.add("Rhinos");
+        case 8: futureTeams.add("Sharks");
+                 break;
+        default: break;
+    }
+    System.out.println("Availabe Team Names:");
+    if (futureTeams.isEmpty()) {
+        System.out.println("Invalid Player");
+    } else {
+        for (String teamName : futureTeams) {
+            System.out.println(teamName);
+        }
+        
+      //Input for team names
+     
+        	
+    	System.out.println("Enter team 1's name: ");
+    	team1 = keyboard.nextLine();    
+   
+    	
+    	System.out.println("Enter team 2's name: ");
+    	team2 = keyboard.nextLine();
+    	
+    	System.out.println("Enter team 2's name: ");
+    	team3 = keyboard.nextLine();
+    }
+     
+    
+    
+{   
+{  
+   
+}   
+}
+}
+}
+}
