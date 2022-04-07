@@ -1,82 +1,85 @@
-package iTS275;
+package Golf;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 import java.awt.*;   
 
-public class SwitchDemoFallThrough {
-public static void main(String[] args) {
+public class Head2HeadGolf {
+	
+		public static void main(String[] args) {
+	
+	
     java.util.ArrayList<String> futureTeams =
-        new java.util.ArrayList<String>();
-
+    new java.util.ArrayList<String>();
+    Scanner scan = new Scanner (System.in);
+    Scanner keyboard = new Scanner(System.in); // Create a Scanner object for keyboard input as in the exercises we did 
+    
     String Whales = null;
     String Gophers= null;
     String Penguins= null;
     String Wolves= null;
     String Ducks = null;
     String rhinos= null;
-    
-  int teams = 3;
-  String team1 = null; 
-	String team2 = null;
-	String team3;
-	
-	// Constant because there should always be four players per team
+  
+	boolean	nameTest = true;
+    final int teams = 3;
 	final int teamSize = 4; 
 	
-	// Create a Scanner object for keyboard input as in the exercises we did 
-	Scanner keyboard = new Scanner(System.in); 
 	
+	 System.out.println("Welcome to Head 2 Head golf. Below you can view all players following team name selection");
+	 System.out.print(System.lineSeparator());
+	 
 	// Create an ArrayList to hold some names.
-    ArrayList<String> Team1 = new ArrayList<String>();
-    ArrayList<String> Team2 = new ArrayList<String>();
-    ArrayList<String> Team3 = new ArrayList<String>();
+    ArrayList<String> Players = new ArrayList<String>();
+    ArrayList<String> Players2 = new ArrayList<String>();
+    ArrayList<String> Players3 = new ArrayList<String>();
     
-
+    //System.out.print(James.introduce());
     
-    // Team 1 .
-    Team1.add("James");
-    Team1.add("Catherine");
+    // Team 1 Players.
+    Players.add("Player 1");
+    //System.out.print(James.introduce());
+    System.out.print(System.lineSeparator());
     
+    Players.add("Player 2");
     
-
     // Display the size of the ArrayList.
     System.out.println("Team 1: ");
-    
 
     // Now display the items in nameList.
-    for (int index = 0; index < Team1.size(); index++)
-       System.out.println(Team1.get(index));				
+    for (int index = 0; index < Players.size(); index++)
+       System.out.println(Players.get(index));				
     	 System.out.print(System.lineSeparator());
-    
-    // Team 2 .
-    Team2.add("Mike");
-    Team2.add("Ed");
-    
-    
-    
+    	  
+    	
+    // Team 2 Players.
+    Players2.add("Player 3");
+    Players2.add("Player 4");
+     
     // Display the size of the ArrayList.
     System.out.println("Team 2:");
-    for (int index = 0; index < Team2.size(); index++)
-        System.out.println(Team2.get(index));
-        System.out.print(System.lineSeparator());
     
+    for (int index = 0; index < Players2.size(); index++)
+        System.out.println(Players2.get(index));
+        System.out.print(System.lineSeparator());
+        
     
  // Team 3 .
-    Team3.add("Sarah");
-    Team3.add("Daniel");
+        Players3.add("Player 5");
+        Players3.add("Player 6");
     
-    
-    
+   
  // Display the size of the ArrayList.
     System.out.println("Team 3:");
 
-    for (int index = 0; index < Team3.size(); index++)
-        System.out.println(Team3.get(index));
+    for (int index = 0; index < Players3.size(); index++)
+        System.out.println(Players3.get(index));
         System.out.print(System.lineSeparator());
     
         { 
-	
+        	
+	//Switch Statements for available team names
     switch (teams) {
         case 1:  System.out.println("Badgers");
         case 2:  futureTeams.add("Gophers");
@@ -91,33 +94,83 @@ public static void main(String[] args) {
     }
     System.out.println("Availabe Team Names:");
     if (futureTeams.isEmpty()) {
-        System.out.println("Invalid Player");
+        System.out.println("Invalid Team");
     } else {
         for (String teamName : futureTeams) {
             System.out.println(teamName);
         }
         
-      //Input for team names
-     
-        	
-    	System.out.println("Enter team 1's name: ");
-    	team1 = keyboard.nextLine();    
-   
-    	
-    	System.out.println("Enter team 2's name: ");
-    	team2 = keyboard.nextLine();
-    	
-    	System.out.println("Enter team 2's name: ");
-    	team3 = keyboard.nextLine();
+      //Input for team names 	
+        System.out.println("Choose name for Team 1:");
+        String team1Name = scan.nextLine();
+        //Player 1 Input Validation
+        if ((!team1Name.equalsIgnoreCase("Whales"))
+        || (!team1Name.equalsIgnoreCase("Penguins"))		
+        || (!team1Name.equalsIgnoreCase("Wolves"))
+        || (!team1Name.equalsIgnoreCase("Ducks"))
+        || (!team1Name.equalsIgnoreCase("Rhinos"))
+        || (!team1Name.equalsIgnoreCase("Sharks")))
+        {
+            System.out.println("You can only choose from the availabe teams");
+        }
+        //Send Back to input
+        System.out.println("Choose name for Team 2:");
+        String team2Name = scan.nextLine();
+        //Player 2 Input Validation
+        if ((team2Name != ("Whales"))
+                || (team2Name != ("Penguins"))
+                || (team2Name != ("Wolves"))
+                || (team2Name != ("Ducks"))
+                || (team2Name != ("Rhinos"))
+                || (team2Name!= ("Sharks")))
+                {
+                    System.out.println("You can only choose from the availabe teams");
+        }
+        //Send Back to input
+        System.out.println("Choose name for Team 3:");
+        String team3Name = scan.nextLine(); //Declare Team 3 Name variable 
+        //Player 2 Input Validation
+        if ((team3Name != ("Whales"))
+                || (team3Name != ("Penguins"))
+                || (team3Name != ("Wolves"))
+                || (team3Name != ("Ducks"))
+                || (team3Name != ("Rhinos"))
+                || (team3Name != ("Sharks")))
+                {
+                    System.out.println("You can only choose from the availabe teams");
+        }
     }
+}
      
+    //Exception handling
+	try {
+	      int[] team1 = {0};
+	      System.out.println(team1[0]);
+	    } catch (Exception e) {
+	      System.out.println("Something went wrong.");
+	      
+	      try {
+		      int[]team2 = {1};
+		      System.out.println(team2[1]);
+		    } catch (Exception y) {
+		      System.out.println("Something went wrong.");
+		    }
+	      
+	      try {
+		      int[] team3 = { 2};
+		      System.out.println(team3[2]);
+		    } catch (Exception x) {
+		      System.out.println("Something went wrong.");
+		    }
+	      
+	      
+	      
+	      
+	    }
+	
+	}
+}
     
-    
-{   
-{  
    
-}   
-}
-}
-}
-}
+
+
