@@ -1,0 +1,55 @@
+package Golf;
+
+public abstract class playerInfo {
+	public static void main(String[] args) {
+		// THIS IS HOW WE CAN CREATE OBJECTS IN JAVA
+		  players James = new players(); 
+		  James.name = "James Smith";
+		  James.playerID = 5462;
+		  James.age = 20;
+		  James.score();
+		  James.introduce();
+		  
+		  players Catherine = new players(); 
+		  Catherine.name = "Catherine Wells";
+		  Catherine.playerID = 3567;
+		  Catherine.age = 22;
+		  Catherine.score();
+		  Catherine.introduce();
+		  
+		  players Kevin = new players(); 
+		  Kevin.name = "Kevin Jones";
+		  Kevin.playerID = 9336;
+		  Kevin.age = 26;
+		  Kevin.score();
+		  Kevin.introduce();
+		  
+		  players Ed = new players(); 
+		  Ed.name = "Edward Berry";
+		  Ed.playerID = 4778;
+		  Ed.age = 20;
+		  Ed.score();
+		  Ed.introduce();
+		  
+		  players Sarah = new players(); 
+		  Sarah.name = "Sarah Oakley";
+		  Sarah.playerID = 2291;
+		  Sarah.age = 25;
+		  Sarah.score();
+		  Sarah.introduce();
+		  
+		  players Joesph = new players(); 
+		  Joesph.name = "Joesph Conner";
+		  Joesph.playerID = 8914;
+		  Joesph.age = 28;
+		  Joesph.score();
+		  Joesph.introduce();
+		}
+	 
+
+{
+}
+	public playerInfo() {
+		// TODO Auto-generated constructor stub
+	}
+}
