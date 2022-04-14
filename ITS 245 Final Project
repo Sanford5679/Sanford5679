@@ -8,10 +8,6 @@ import iTS275.players;
 
 import java.awt.*;   
 
- 
-
-
-
 public abstract class Head2HeadGolf {
 	
 	public static void main(String[] args) {
@@ -22,36 +18,29 @@ public abstract class Head2HeadGolf {
     Scanner scan = new Scanner (System.in);
     Scanner keyboard = new Scanner(System.in); // Create a Scanner object for keyboard input as in the exercises we did 
     
-    String Whales = null;
-    String Gophers= null;
-    String Penguins= null;
-    String Wolves= null;
-    String Ducks = null;
-    String rhinos= null;
-  
-	boolean	nameTest = true;
-    final int teams = 3;
-	final int teamSize = 4; 
+   
+    final int teams = 3; // Constant for team size 
 	
-	
+	// Introduction message 
 	 System.out.println("Welcome to Head 2 Head golf. Below you can view all players following team name selection");
 	 System.out.print(System.lineSeparator());
 	 
-	// Create an ArrayList to hold some names.
+	// Array list for teams
     ArrayList<String> team1 = new ArrayList<String>();
     ArrayList<String> team2 = new ArrayList<String>();
     ArrayList<String> team3 = new ArrayList<String>();
     
     //System.out.print(James.introduce());
     
+ // Display the size of the ArrayList for Team 2.
     // Team 1 Players.
-    // Display the size of the ArrayList.
     System.out.println("Team 1: ");
 
-    // Now display the items in nameList.
     for (int index = 0; index < team1.size(); index++)
-       System.out.println(team1.get(index));				
-    	
+       System.out.println(team1.get(index));	
+    
+    // Create Player Objects 
+    //Team 1
     team1.add("Player 1");
     players James = new players(); 
 	  James.name = "James Smith";
@@ -70,13 +59,13 @@ public abstract class Head2HeadGolf {
 	  Catherine.introduce();
 	    
 	  
-	  // Display the size of the ArrayList.
+	  // Display the size of the ArrayList for Team 2.
 	   System.out.println("Team 2:");
 	    
 	    for (int index = 0; index < team2.size(); index++)
 	        System.out.println(team2.get(index));
 	        
-    // Team 2 Players.
+    // Team 2 
     team2.add("Player 3");
     players Kevin = new players(); 
 	  Kevin.name = "Kevin Jones";
@@ -94,13 +83,8 @@ public abstract class Head2HeadGolf {
 	  Ed.score();
 	  Ed.introduce();
 	 
-	  
-	  
-    // Display the size of the ArrayList.
- 
-    
-	  
-	// Display the size of the ArrayList.
+
+	// Display the size of the ArrayList for Team 3
 	    System.out.println("Team 3:");
 
 	    for (int index = 0; index < team3.size(); index++)
@@ -149,23 +133,24 @@ public abstract class Head2HeadGolf {
             System.out.println(teamName);
         }
         
-      //Input for team names 	
+      //Shows available team names that you can select 	
         System.out.println("Choose name for Team 1:");
         String team1Name = scan.nextLine();
         //Player 1 Input Validation
-        if ((!team1Name.equalsIgnoreCase("Whales"))
-        || (!team1Name.equalsIgnoreCase("Penguins"))		
-        || (!team1Name.equalsIgnoreCase("Wolves"))
-        || (!team1Name.equalsIgnoreCase("Ducks"))
-        || (!team1Name.equalsIgnoreCase("Rhinos"))
-        || (!team1Name.equalsIgnoreCase("Sharks")))
+        if ((team1Name != ("Whales"))
+                || (team1Name != ("Penguins"))
+                || (team1Name != ("Wolves"))
+                || (team1Name != ("Ducks"))
+                || (team1Name != ("Rhinos"))
+                || (team1Name!= ("Sharks")))
+        	
         {
-            System.out.println("You can only choose from the availabe teams");
+            System.out.println("You can only choose from the availabe teams"); // If team name does not match available you will get this message. 
         }
         //Send Back to input
         System.out.println("Choose name for Team 2:");
         String team2Name = scan.nextLine();
-        //Player 2 Input Validation
+        
         if ((team2Name != ("Whales"))
                 || (team2Name != ("Penguins"))
                 || (team2Name != ("Wolves"))
@@ -175,7 +160,7 @@ public abstract class Head2HeadGolf {
                 {
                     System.out.println("You can only choose from the availabe teams");
         }
-        //Send Back to input
+        
         System.out.println("Choose name for Team 3:");
         String team3Name = scan.nextLine(); //Declare Team 3 Name variable 
         //Player 2 Input Validation
@@ -187,9 +172,9 @@ public abstract class Head2HeadGolf {
                 || (team3Name != ("Sharks")))
                 {
                     System.out.println("You can only choose from the availabe teams");
+                }
+    		}
         }
-    }
-}
      
     //Exception handling
 	try {
@@ -215,9 +200,49 @@ public abstract class Head2HeadGolf {
 	      
 	      
 	    }
-	    }
+	 }
 	
 	
+
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+
+
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
+
+
+
+	@Override
+	protected void finalize() throws Throwable {
+		// TODO Auto-generated method stub
+		super.finalize();
+	}
+
+
 
 	protected static String introduce() {
 		return null;
@@ -226,6 +251,3 @@ public abstract class Head2HeadGolf {
 	}
 }
     
-   
-
-
