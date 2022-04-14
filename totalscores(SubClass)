@@ -1,0 +1,67 @@
+package iTS275;
+
+import Golf.playerScores;
+
+public class totalScores extends playerScores
+{
+   float avg1;
+   float avg2;
+   float avg3;
+   
+   int totalScore1;
+   int totalScore2;
+   int totalScore3;
+   
+   final int teamSize = 2;
+   
+   
+   public totalScores()
+   {
+	   super();
+	   for (int i = 1; i < 5; i++) {
+			String player1;
+			int player2;
+			System.out.println("Team 1 " + player1 + + player2 + " finished with: "); //Asks the user for the scores
+			Object indvidualScore = keyboard.nextInt(); //input is received here
+			player1 += player2; //Totals the scores for team one; 
+			}
+	   
+	   
+	   
+   }
+	
+
+@Override
+public int hashCode() {
+	// TODO Auto-generated method stub
+	return super.hashCode();
+}
+
+
+@Override
+public boolean equals(Object obj) {
+	// TODO Auto-generated method stub
+	return super.equals(obj);
+}
+
+
+@Override
+protected Object clone() throws CloneNotSupportedException {
+	// TODO Auto-generated method stub
+	return super.clone();
+}
+
+
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return super.toString();
+}
+
+
+@Override
+protected void finalize() throws Throwable {
+	// TODO Auto-generated method stub
+	super.finalize();
+}
+}
