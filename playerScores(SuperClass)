@@ -1,0 +1,102 @@
+package Golf;
+
+import java.util.Scanner;
+
+public class playerScores 
+
+{
+public static void main(String[] args)
+{
+  
+    int totalScoreTeam1 = 0;
+	 int totalScoreTeam2;
+	int totalScoreTeam3;
+   
+   double Score1;
+   double playerScores2;
+   double playerScores3;
+   
+   
+   // Create a Scanner object for keyboard input.
+   Scanner keyboard = new Scanner(System.in);
+   PrintScore1();
+   
+   System.out.println("Enter the individual scores for each player of team 1 ");
+  
+	for (int player1 = 1; player1 < 2; player1++) {	
+		System.out.println("Player " + player1 + " finished with: "); //Asks the user for the scores
+		Score1 = keyboard.nextInt(); //input is received here
+		
+	
+		for (int player2 = 2; player2 < 3; player2++) {
+			System.out.println("Player " + player2 + " finished with: "); //Asks the user for the scores
+			playerScores2 = keyboard.nextInt(); //input is received here
+			System.out.print(System.lineSeparator());
+			
+			  System.out.println("Enter the individual scores for each player of team 2 ");	
+			for (int player3 = 3; player3 < 4; player3++) {
+				System.out.println("Player " + player3 + " finished with: "); //Asks the user for the scores
+				Score1 = keyboard.nextInt(); //input is received here
+						
+				for (int player4 = 4; player4 < 5; player4++) {
+					System.out.println("Player " + player4 + " finished with: "); //Asks the user for the scores
+					Score1 = keyboard.nextInt(); //input is received here
+					System.out.print(System.lineSeparator());
+					
+					  System.out.println("Enter the individual scores for each player of team 3 ");
+					for (int player5 = 5; player5 < 6; player5++) {
+						System.out.println("Player " + player5 + " finished with: "); //Asks the user for the scores
+						Score1 = keyboard.nextInt(); //input is received here
+						
+		
+						for (int player6 = 6; player6 < 7; player6++) {
+							System.out.println("Player " + player6 + " finished with: "); //Asks the user for the scores
+							Score1 = keyboard.nextInt(); //input is received here
+							
+		
+	
+}
+}
+}
+}
+}
+			}
+		}
+
+@Override
+public int hashCode() {
+	// TODO Auto-generated method stub
+	return super.hashCode();
+}
+
+@Override
+public boolean equals(Object obj) {
+	// TODO Auto-generated method stub
+	return super.equals(obj);
+}
+
+@Override
+protected Object clone() throws CloneNotSupportedException {
+	// TODO Auto-generated method stub
+	return super.clone();
+}
+
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return super.toString();
+}
+
+@Override
+protected void finalize() throws Throwable {
+	// TODO Auto-generated method stub
+	super.finalize();
+}
+
+private static void PrintScore1() {
+	// TODO Auto-generated method stub
+	
+}
+	
+}
+
