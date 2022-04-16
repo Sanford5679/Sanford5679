@@ -1,6 +1,6 @@
-package iTS275;
-
-import Golf.playerScores;
+package Golf;
+import java.awt.geom.Arc2D.Double;
+import java.util.Scanner;
 
 public class totalScores extends playerScores
 {
@@ -8,29 +8,48 @@ public class totalScores extends playerScores
    float avg2;
    float avg3;
    
-   int totalScore1;
-   int totalScore2;
-   int totalScore3;
-   
-   final int teamSize = 2;
-   
    
    public totalScores()
    {
 	   super();
-	   for (int i = 1; i < 5; i++) {
-			String player1;
-			int player2;
-			System.out.println("Team 1 " + player1 + + player2 + " finished with: "); //Asks the user for the scores
-			Object indvidualScore = keyboard.nextInt(); //input is received here
-			player1 += player2; //Totals the scores for team one; 
-			}
+			this.Score1 += Score2; //Totals the scores for team one
+			Score1 = keyboard.nextInt(); 
+			Score2 = keyboard.nextInt();
+			System.out.println();
+			System.out.println("The total score for team " + totalScore1 + " was: ");
+			
+			this.Score3 += Score4; //Totals the scores for team two
+			Score3 = keyboard.nextInt(); 
+			Score4 = keyboard.nextInt();
+			System.out.println();
+			System.out.println("The total score for team " + totalScore2 + " was: ");
+			
+			this.Score5 += Score6; //Totals the scores for team three
+			Score5 = keyboard.nextInt(); 
+			Score6 = keyboard.nextInt();
+			System.out.println();
+			System.out.println("The total score for team " + totalScore1 + " was: ");
+	   }   
 	   
+   public double avg()
+   {
+	   		avg1 = (float) totalScore1/teamSize; //Average score for team one
+			System.out.println();
+			System.out.println("The average score for team " + totalScore1 + " was: " + avg1);
+			return avg1;
+		
+   }		
+   {			avg2 = (float) totalScore2/teamSize; //Average score for team two
+			System.out.println();
+			System.out.println("The average score for team " + totalScore2 + " was: " + avg1);
+				
+				
+			avg3 = (float) totalScore3/teamSize; //Average score for team three
+			System.out.println();
+			System.out.println("The average score for team " + totalScore3 + " was: " + avg1);
+					
+	   }   
 	   
-	   
-   }
-	
-
 @Override
 public int hashCode() {
 	// TODO Auto-generated method stub
