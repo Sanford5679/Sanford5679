@@ -1,57 +1,65 @@
 package Golf;
-
 import java.util.Scanner;
 
 public class playerScores 
 
 {
-public static void main(String[] args)
-{
-  
-    int totalScoreTeam1 = 0;
-	 int totalScoreTeam2;
-	int totalScoreTeam3;
-   
+   // Player Score Variables 
    double Score1;
+   double Score2;
+   double Score3;
+   double Score4;
+   double Score5;
+   double Score6;
+   
+   // Total Team Score Variables 
+   double totalScore1 = Score1 =+ Score2;
+   double totalScore2 = Score3 =+ Score4;
+   double totalScore3 = Score5 =+ Score6;
+   
    double playerScores2;
    double playerScores3;
    
+   String Team1;
+   String Team2;
+   String Team3;
+   
+   final int teamSize = 2;
    
    // Create a Scanner object for keyboard input.
-   Scanner keyboard = new Scanner(System.in);
-   PrintScore1();
-   
-   System.out.println("Enter the individual scores for each player of team 1 ");
+   Scanner keyboard = new Scanner(System.in);{
+	   
+   		System.out.println("Enter the individual scores for each player of team 1 ");
   
-	for (int player1 = 1; player1 < 2; player1++) {	
-		System.out.println("Player " + player1 + " finished with: "); //Asks the user for the scores
+	for (int player1Score = 1; player1Score < 2; player1Score++) {	
+		System.out.println("Player " + player1Score + " finished with: "); //Asks the user for the scores
 		Score1 = keyboard.nextInt(); //input is received here
 		
 	
-		for (int player2 = 2; player2 < 3; player2++) {
-			System.out.println("Player " + player2 + " finished with: "); //Asks the user for the scores
-			playerScores2 = keyboard.nextInt(); //input is received here
-			System.out.print(System.lineSeparator());
+	for (int player2Score = 2; player2Score < 3; player2Score++) {
+		System.out.println("Player " + player2Score + " finished with: "); //Asks the user for the scores
+		Score2 = keyboard.nextInt(); //input is received here
+		System.out.print(System.lineSeparator());
 			
-			  System.out.println("Enter the individual scores for each player of team 2 ");	
-			for (int player3 = 3; player3 < 4; player3++) {
-				System.out.println("Player " + player3 + " finished with: "); //Asks the user for the scores
-				Score1 = keyboard.nextInt(); //input is received here
+		System.out.println("Enter the individual scores for each player of team 2 ");	
+	for (int player3Score = 3; player3Score < 4; player3Score++) {
+		System.out.println("Player " + player3Score + " finished with: "); //Asks the user for the scores
+		Score3 = keyboard.nextInt(); //input is received here
 						
-				for (int player4 = 4; player4 < 5; player4++) {
-					System.out.println("Player " + player4 + " finished with: "); //Asks the user for the scores
-					Score1 = keyboard.nextInt(); //input is received here
-					System.out.print(System.lineSeparator());
+	for (int player4Score = 4; player4Score < 5; player4Score++) {
+		System.out.println("Player " + player4Score + " finished with: "); //Asks the user for the scores
+		Score4 = keyboard.nextInt(); //input is received here
+		System.out.print(System.lineSeparator());
 					
-					  System.out.println("Enter the individual scores for each player of team 3 ");
-					for (int player5 = 5; player5 < 6; player5++) {
-						System.out.println("Player " + player5 + " finished with: "); //Asks the user for the scores
-						Score1 = keyboard.nextInt(); //input is received here
+		System.out.println("Enter the individual scores for each player of team 3 ");
+	for (int player5Score = 5; player5Score < 6; player5Score++) {
+		System.out.println("Player " + player5Score + " finished with: "); //Asks the user for the scores
+		Score5 = keyboard.nextInt(); //input is received here
 						
 		
-						for (int player6 = 6; player6 < 7; player6++) {
-							System.out.println("Player " + player6 + " finished with: "); //Asks the user for the scores
-							Score1 = keyboard.nextInt(); //input is received here
+	for (int player6Score = 6; player6Score < 7; player6Score++) {
+		System.out.println("Player " + player6Score + " finished with: "); //Asks the user for the scores
+		Score6 = keyboard.nextInt(); //input is received here
 							
 		
 	
@@ -99,4 +107,5 @@ private static void PrintScore1() {
 }
 	
 }
+
 
