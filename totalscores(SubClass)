@@ -33,20 +33,26 @@ public class totalScores extends playerScores
 	   
    public double avg()
    {
-	   		avg1 = (float) totalScore1/teamSize; //Average score for team one
-			System.out.println();
-			System.out.println("The average score for team " + totalScore1 + " was: " + avg1);
-			return avg1;
+	   avg1 = (float) totalScore1/teamSize; //Average score for team one
+		System.out.println();
+		System.out.println("The average score for team 1 " + totalScore1 + " was: " + avg1);
+		return avg1;
+		
 		
    }		
-   {			avg2 = (float) totalScore2/teamSize; //Average score for team two
+   {	
+	   avg1 = (float) totalScore1/teamSize; //Average score for team one
+		System.out.println();
+		System.out.println("The average score for team 1 was: " + totalScore1 + + avg1);
+	   
+	   avg2 = (float) totalScore2/teamSize; //Average score for team one
 			System.out.println();
-			System.out.println("The average score for team " + totalScore2 + " was: " + avg1);
+			System.out.println("The average score for team 2 was: " + totalScore2 +  + avg1);
 				
 				
-			avg3 = (float) totalScore3/teamSize; //Average score for team three
+			avg3 = (float) totalScore3/teamSize; //Average score for team one
 			System.out.println();
-			System.out.println("The average score for team " + totalScore3 + " was: " + avg1);
+			System.out.println("The average score for team 3 was: " + totalScore3 + + avg1);
 					
 	   }   
 	   
@@ -83,4 +89,8 @@ protected void finalize() throws Throwable {
 	// TODO Auto-generated method stub
 	super.finalize();
 }
+
+public void Score2(double total) {
+	// TODO Auto-generated method stub
+	
 }
