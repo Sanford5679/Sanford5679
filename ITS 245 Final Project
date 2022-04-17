@@ -18,7 +18,8 @@ public abstract class Head2HeadGolf {
     Scanner scan = new Scanner (System.in);
     Scanner keyboard = new Scanner(System.in); // Create a Scanner object for keyboard input as in the exercises we did 
     
-   
+   double score = 0;
+   double Total = 0;
     final int teams = 3; // Constant for team size 
 	
 	// Introduction message 
@@ -147,6 +148,8 @@ public abstract class Head2HeadGolf {
         {
             System.out.println("You can only choose from the availabe teams"); // If team name does not match available you will get this message. 
         }
+        
+        
         //Send Back to input
         System.out.println("Choose name for Team 2:");
         String team2Name = scan.nextLine();
@@ -161,6 +164,8 @@ public abstract class Head2HeadGolf {
                     System.out.println("You can only choose from the availabe teams");
         }
         
+      
+        
         System.out.println("Choose name for Team 3:");
         String team3Name = scan.nextLine(); //Declare Team 3 Name variable 
         //Player 2 Input Validation
@@ -173,9 +178,22 @@ public abstract class Head2HeadGolf {
                 {
                     System.out.println("You can only choose from the availabe teams");
                 }
-    		}
+        
+     }
         }
-     
+        // Call Total scores method ... //System.out.println("The raw score is " +
+        								//totalScores()() +
+        								//" points."));  
+        
+        playerScores Scores = new  playerScores();
+        Scores.Score1(score);
+ 	
+        //totalScores TeamScore = new totalScores();
+        //TeamScore.Score1(Total);
+                  
+        totalScores Average = new totalScores();
+        Average.avg();
+        	
     //Exception handling
 	try {
 	      int[] t1 = {0};
@@ -250,4 +268,3 @@ public abstract class Head2HeadGolf {
 		
 	}
 }
-    
