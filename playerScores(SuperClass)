@@ -17,8 +17,6 @@ public class playerScores
    double totalScore2 = Score3 =+ Score4;
    double totalScore3 = Score5 =+ Score6;
    
-   double playerScores2;
-   double playerScores3;
    
    String Team1;
    String Team2;
@@ -29,53 +27,61 @@ public class playerScores
    // Create a Scanner object for keyboard input.
    Scanner keyboard = new Scanner(System.in);{
 	   
-   		System.out.println("Enter the individual scores for each player of team 1 ");
+   }
+   
+public playerScores() {
+
+
+   System.out.println("Enter the individual scores for each player of team 1 ");
   
 	for (int player1Score = 1; player1Score < 2; player1Score++) {	
 		System.out.println("Player " + player1Score + " finished with: "); //Asks the user for the scores
 		Score1 = keyboard.nextInt(); //input is received here
 		
 	
-	for (int player2Score = 2; player2Score < 3; player2Score++) {
-		System.out.println("Player " + player2Score + " finished with: "); //Asks the user for the scores
-		Score2 = keyboard.nextInt(); //input is received here
-		System.out.print(System.lineSeparator());
+		for (int player2Score = 2; player2Score < 3; player2Score++) {
+			System.out.println("Player " + player2Score + " finished with: "); //Asks the user for the scores
+			Score2 = keyboard.nextInt(); //input is received here
+			System.out.print(System.lineSeparator());
 			
-		System.out.println("Enter the individual scores for each player of team 2 ");	
-	for (int player3Score = 3; player3Score < 4; player3Score++) {
-		System.out.println("Player " + player3Score + " finished with: "); //Asks the user for the scores
-		Score3 = keyboard.nextInt(); //input is received here
+			  System.out.println("Enter the individual scores for each player of team 2 ");	
+			for (int player3Score = 3; player3Score < 4; player3Score++) {
+				System.out.println("Player " + player3Score + " finished with: "); //Asks the user for the scores
+				Score3 = keyboard.nextInt(); //input is received here
 						
-	for (int player4Score = 4; player4Score < 5; player4Score++) {
-		System.out.println("Player " + player4Score + " finished with: "); //Asks the user for the scores
-		Score4 = keyboard.nextInt(); //input is received here
-		System.out.print(System.lineSeparator());
+				for (int player4Score = 4; player4Score < 5; player4Score++) {
+					System.out.println("Player " + player4Score + " finished with: "); //Asks the user for the scores
+					Score4 = keyboard.nextInt(); //input is received here
+					System.out.print(System.lineSeparator());
 					
-		System.out.println("Enter the individual scores for each player of team 3 ");
-	for (int player5Score = 5; player5Score < 6; player5Score++) {
-		System.out.println("Player " + player5Score + " finished with: "); //Asks the user for the scores
-		Score5 = keyboard.nextInt(); //input is received here
+					  System.out.println("Enter the individual scores for each player of team 3 ");
+					for (int player5Score = 5; player5Score < 6; player5Score++) {
+						System.out.println("Player " + player5Score + " finished with: "); //Asks the user for the scores
+						Score5 = keyboard.nextInt(); //input is received here
 						
 		
-	for (int player6Score = 6; player6Score < 7; player6Score++) {
-		System.out.println("Player " + player6Score + " finished with: "); //Asks the user for the scores
-		Score6 = keyboard.nextInt(); //input is received here
+						for (int player6Score = 6; player6Score < 7; player6Score++) {
+							System.out.println("Player " + player6Score + " finished with: "); //Asks the user for the scores
+							Score6 = keyboard.nextInt(); //input is received here
 							
 		
 	
-}
-}
-}
-}
-}
+						}
+					}
+				}
 			}
 		}
+	}
+}
+ 
+
+
 
 @Override
 public int hashCode() {
 	// TODO Auto-generated method stub
 	return super.hashCode();
-}
+	}
 
 @Override
 public boolean equals(Object obj) {
@@ -87,25 +93,28 @@ public boolean equals(Object obj) {
 protected Object clone() throws CloneNotSupportedException {
 	// TODO Auto-generated method stub
 	return super.clone();
-}
+	}
 
 @Override
 public String toString() {
 	// TODO Auto-generated method stub
 	return super.toString();
-}
+	}
 
 @Override
 protected void finalize() throws Throwable {
 	// TODO Auto-generated method stub
 	super.finalize();
-}
+	}
 
-private static void PrintScore1() {
+
+
+
+public void Score1(double score) {
 	// TODO Auto-generated method stub
 	
 }
-	
-}
 
+
+}
 
