@@ -5,10 +5,11 @@ import java.util.Date;
 import java.util.Scanner;
 
 import iTS275.players;
+import test.WinorLose;
 
 import java.awt.*;   
 
-public abstract class Head2HeadGolf {
+abstract class Head2HeadGolf {
 	
 	public static void main(String[] args) {
 	
@@ -19,30 +20,36 @@ public abstract class Head2HeadGolf {
     Scanner keyboard = new Scanner(System.in); // Create a Scanner object for keyboard input as in the exercises we did 
     
    double score = 0;
-   double Total = 0;
-    final int teams = 3; // Constant for team size 
+   double total = 0;
+   int winner = 0;
+   final int teams = 3; // Constant for team size 
+   String team1;
+   String team2;
+   String team3;
+   String team4;
+   
 	
 	// Introduction message 
 	 System.out.println("Welcome to Head 2 Head golf. Below you can view all players following team name selection");
 	 System.out.print(System.lineSeparator());
 	 
-	// Array list for teams
-    ArrayList<String> team1 = new ArrayList<String>();
-    ArrayList<String> team2 = new ArrayList<String>();
-    ArrayList<String> team3 = new ArrayList<String>();
-    
+	// Array list for team based states
+    ArrayList<String> California = new ArrayList<String>();
+    ArrayList<String> NewYork = new ArrayList<String>();
+    ArrayList<String> NorthCarolina = new ArrayList<String>();
+    ArrayList<String> Florida = new ArrayList<String>();
     //System.out.print(James.introduce());
     
  // Display the size of the ArrayList for Team 2.
     // Team 1 Players.
-    System.out.println("Team 1: ");
+    System.out.println("From Califronia: ");
 
-    for (int index = 0; index < team1.size(); index++)
-       System.out.println(team1.get(index));	
+    for (int index = 0; index < California.size(); index++)
+       System.out.println(California.get(index));	
     
     // Create Player Objects 
     //Team 1
-    team1.add("Player 1");
+    California.add("Player 1");
     players James = new players(); 
 	  James.name = "James Smith";
 	  James.playerID = 5462;
@@ -51,7 +58,7 @@ public abstract class Head2HeadGolf {
 	  James.introduce();
 
 	  
-    team1.add("Player 2");
+    California.add("Player 2");
     players Catherine = new players(); 
 	  Catherine.name = "Catherine Wells";
 	  Catherine.playerID = 3567;
@@ -61,13 +68,13 @@ public abstract class Head2HeadGolf {
 	    
 	  
 	  // Display the size of the ArrayList for Team 2.
-	   System.out.println("Team 2:");
+	   System.out.println("From New York:");
 	    
-	    for (int index = 0; index < team2.size(); index++)
-	        System.out.println(team2.get(index));
+	    for (int index = 0; index < NewYork.size(); index++)
+	        System.out.println(NewYork.get(index));
 	        
     // Team 2 
-    team2.add("Player 3");
+    NewYork.add("Player 3");
     players Kevin = new players(); 
 	  Kevin.name = "Kevin Jones";
 	  Kevin.playerID = 9336;
@@ -76,7 +83,7 @@ public abstract class Head2HeadGolf {
 	  Kevin.introduce();
 	   
     
-    team2.add("Player 4");
+    NewYork.add("Player 4");
     players Ed = new players(); 
 	  Ed.name = "Edward Berry";
 	  Ed.playerID = 4778;
@@ -86,13 +93,13 @@ public abstract class Head2HeadGolf {
 	 
 
 	// Display the size of the ArrayList for Team 3
-	    System.out.println("Team 3:");
+	    System.out.println("From North Carolina:");
 
-	    for (int index = 0; index < team3.size(); index++)
-	        System.out.println(team3.get(index)); 
+	    for (int index = 0; index < NorthCarolina.size(); index++)
+	        System.out.println(NorthCarolina.get(index)); 
 	  
  // Team 3 .
-        team3.add("Player 5");
+        NorthCarolina.add("Player 5");
         players Sarah = new players(); 
 		  Sarah.name = "Sarah Oakley";
 		  Sarah.playerID = 2291;
@@ -101,7 +108,7 @@ public abstract class Head2HeadGolf {
 		  Sarah.introduce();
 		  
       
-        team3.add("Player 6");
+        NorthCarolina.add("Player 6");
         players Joesph = new players(); 
 		  Joesph.name = "Joesph Conner";
 		  Joesph.playerID = 8914;
@@ -135,9 +142,11 @@ public abstract class Head2HeadGolf {
         }
         
       //Shows available team names that you can select 	
-        System.out.println("Choose name for Team 1:");
+        System.out.println("Choose name for" + California + " Team 1:");
         String team1Name = scan.nextLine();
-        //Player 1 Input Validation
+        team1Name = keyboard.toString();
+        
+        //Player 1 Input Validation conditional Operator 
         if ((team1Name != ("Whales"))
                 || (team1Name != ("Penguins"))
                 || (team1Name != ("Wolves"))
@@ -151,8 +160,9 @@ public abstract class Head2HeadGolf {
         
         
         //Send Back to input
-        System.out.println("Choose name for Team 2:");
+        System.out.println("Choose name for" + NewYork + "Team 2:");
         String team2Name = scan.nextLine();
+        team2Name = keyboard.toString();
         
         if ((team2Name != ("Whales"))
                 || (team2Name != ("Penguins"))
@@ -167,33 +177,41 @@ public abstract class Head2HeadGolf {
       
         
         System.out.println("Choose name for Team 3:");
-        String team3Name = scan.nextLine(); //Declare Team 3 Name variable 
+        String team3Name = scan.nextLine(); //Declare Team 3 Name variable as string 
+        team3Name = keyboard.toString();
         //Player 2 Input Validation
-        if ((team3Name != ("Whales"))
+        if ((team3Name != ("Whales"))					//Checks to see if user input correct team name
                 || (team3Name != ("Penguins"))
                 || (team3Name != ("Wolves"))
                 || (team3Name != ("Ducks"))
                 || (team3Name != ("Rhinos"))
                 || (team3Name != ("Sharks")))
                 {
-                    System.out.println("You can only choose from the availabe teams");
+                    System.out.println("You can only choose from the availabe teams"); // If not you will receive this message
                 }
-        
+        			System.out.print(System.lineSeparator());
      }
         }
         // Call Total scores method ... //System.out.println("The raw score is " +
         								//totalScores()() +
         								//" points."));  
+        // Calls playerScores from Superclass
+       // playerScores Scores = new  playerScores();
+       // Scores.Score1(score);
+       System.out.print(System.lineSeparator()); 
         
-        playerScores Scores = new  playerScores();
-        Scores.Score1(score);
- 	
-        //totalScores TeamScore = new totalScores();
-        //TeamScore.Score1(Total);
-                  
-        totalScores Average = new totalScores();
-        Average.avg();
-        	
+      //Calls TeamScore from sub class  
+      //totalScores TeamScore = new totalScores();
+      
+      //Calls avg from totalScores sub class
+       //totalScores Average = new totalScores();
+        //Average.avg();
+        //System.out.print(System.lineSeparator()); 
+        
+       totalScores win = new totalScores();
+        win.WinorLose();
+        System.out.print(System.lineSeparator());
+        
     //Exception handling
 	try {
 	      int[] t1 = {0};
@@ -221,7 +239,7 @@ public abstract class Head2HeadGolf {
 	 }
 	
 	
-
+// Method Overriding
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
@@ -267,4 +285,3 @@ public abstract class Head2HeadGolf {
 		// TODO Auto-generated method stub
 		
 	}
-}
