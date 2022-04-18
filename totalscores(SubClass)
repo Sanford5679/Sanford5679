@@ -2,75 +2,61 @@ package Golf;
 import java.awt.geom.Arc2D.Double;
 import java.util.Scanner;
 
-public class totalScores extends playerScores
+public class totalScores extends playerScores //SubClass
 {
-   float avg1;
-   float avg2;
-   float avg3;
-   float avg4;
    
-  
-   
-   public totalScores()
+   public totalScores() // Constructor playerScores
    {
+	   // Gathers the scores for each member of a specific team and adds them to get a totalScore
 	   super();
-	   System.out.println("Round 1:" +Team1 + "vs" +Team2 +"");
+	   System.out.println("Match 1:");
 			this.totalScore1 = Score1 += Score2; //Totals the scores for team one
-			System.out.println("The total score for team 1 was: " + this.totalScore1 + "");
+			System.out.println("Total score for Team 1: " + this.totalScore1 + "");
 			
 			this.totalScore2 = Score3 += Score4; //Totals the scores for team two
-			System.out.println("The total score for was: " + this.totalScore2+ "");
-			
+			System.out.println("Total score for Team 2: " + this.totalScore2+ "");
+			 System.out.print(System.lineSeparator()); 
+			 
+		System.out.println("Match 2:");	 
 			this.totalScore3 = Score5 += Score6; //Totals the scores for team three
-			System.out.println("The total score for team 3 was: " + this.totalScore3 + "");
+			System.out.println("Total score for Team 3: " + this.totalScore3 + "");
 			
 			this.totalScore4 = Score7 += Score8; //Totals the scores for team four
-			System.out.println("The total score for team 4 was: " + this.totalScore4 + "");
-	   }   
-	   
-  
+			System.out.println("Total score for Team 4: " + this.totalScore4 + "");
+			System.out.print(System.lineSeparator()); 
+	   }
    
-   protected void avg()
-   {
-	   avg1 = (float)totalScore1/teamSize; //Average score for team one
-		System.out.println("The average score for team 1 " + avg1 + "");
-	
-   }		
    
-   public void WinorLose()
+   public static void WinorLose() // WinorLose Static Method takes the totalScores added from the construct and determines the winners.
    {
-   if (totalScore1 < totalScore2) {
-		 System.out.println("Team 1 won the first round!!!");
-		} 
-	else if (totalScore1 > totalScore2){
-		  System.out.println("Team 2 won the first wound!!!");
+	   if (totalScore1 < totalScore2) {
+		 System.out.println("Team 1 wins the 1st match!!!");
+	} 
+	   else if (totalScore1 > totalScore2){
+		  System.out.println("Team 2 wins the 1st match!!!");
 	}
-	else if (totalScore1 == totalScore2) {
-		  System.out.println("First round ends with a tie!!!");
-	
+	   else if (totalScore1 == totalScore2) {
+		  System.out.println("The 1st match ends with a tie!!!");
+		  System.out.print(System.lineSeparator()); 
+		  
 	}	  
 		  
- if (totalScore3 < totalScore4) {
-		  System.out.println("Team 3 wonthe second round!!!");
-		} 
-	else if (totalScore3 > totalScore4){
-		  System.out.println("Team 4 won with the second round!!!");
+	   if (totalScore3 < totalScore4) {
+		  System.out.println("Team 3 wins the 2nd match!!!");
+	} 
+	   else if (totalScore3 > totalScore4){
+		  System.out.println("Team 4 wins the 2nd match!!!");
 	}
-	else if (totalScore3 == totalScore4) {
-		  System.out.println("Second round ends with a tie!!!");
+	   else if (totalScore3 == totalScore4) {
+		  System.out.println("The 2nd match ends with a tie!!!");
+		  
 	}
 }
-   {
-}
- 
-	   
-	   
-	   
-	   
- 		
+   
+  {
+}	
    {	
-	   					
-	   }   
+ }   
 	   
 @Override
 public int hashCode() {
