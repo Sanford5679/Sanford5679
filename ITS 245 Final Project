@@ -11,116 +11,155 @@ import java.awt.*;
 
 abstract class Head2HeadGolf {
 	
-	public static void main(String[] args) {
-	
+	public static void main(String[] args) {  // Main File
+		{	
 	
     java.util.ArrayList<String> futureTeams =
     new java.util.ArrayList<String>();
     Scanner scan = new Scanner (System.in);
     Scanner keyboard = new Scanner(System.in); // Create a Scanner object for keyboard input as in the exercises we did 
     
-   double score = 0;
-   double total = 0;
-   int winner = 0;
-   final int teams = 3; // Constant for team size 
-   String team1;
-   String team2;
-   String team3;
-   String team4;
+
+   final int teams = 4; // Constant for number of teams
    
 	
 	// Introduction message 
-	 System.out.println("Welcome to Head 2 Head golf. Below you can view all players following team name selection");
+	 System.out.println("Welcome to the Head2Head Golf simulator!!!");
 	 System.out.print(System.lineSeparator());
 	 
-	// Array list for team based states
-    ArrayList<String> California = new ArrayList<String>();
-    ArrayList<String> NewYork = new ArrayList<String>();
-    ArrayList<String> NorthCarolina = new ArrayList<String>();
-    ArrayList<String> Florida = new ArrayList<String>();
-    //System.out.print(James.introduce());
-    
- // Display the size of the ArrayList for Team 2.
-    // Team 1 Players.
-    System.out.println("From Califronia: ");
+	 // Create new Date Object
+     Date date = new Date();
 
-    for (int index = 0; index < California.size(); index++)
-       System.out.println(California.get(index));	
-    
-    // Create Player Objects 
-    //Team 1
-    California.add("Player 1");
-    players James = new players(); 
-	  James.name = "James Smith";
-	  James.playerID = 5462;
-	  James.age = 20;
-	  James.score();
-	  James.introduce();
+     // Print date and time
+     System.out.print("Today's date and time:");
+     System.out.println(date.toString());
+     System.out.print(System.lineSeparator());
 
-	  
-    California.add("Player 2");
-    players Catherine = new players(); 
-	  Catherine.name = "Catherine Wells";
-	  Catherine.playerID = 3567;
-	  Catherine.age = 22;
-	  Catherine.score();
-	  Catherine.introduce();
-	    
-	  
-	  // Display the size of the ArrayList for Team 2.
-	   System.out.println("From New York:");
-	    
-	    for (int index = 0; index < NewYork.size(); index++)
-	        System.out.println(NewYork.get(index));
-	        
-    // Team 2 
-    NewYork.add("Player 3");
-    players Kevin = new players(); 
-	  Kevin.name = "Kevin Jones";
-	  Kevin.playerID = 9336;
-	  Kevin.age = 26;
-	  Kevin.score();
-	  Kevin.introduce();
-	   
-    
-    NewYork.add("Player 4");
-    players Ed = new players(); 
-	  Ed.name = "Edward Berry";
-	  Ed.playerID = 4778;
-	  Ed.age = 20;
-	  Ed.score();
-	  Ed.introduce();
 	 
+	 //Create Boolean to determine if User is familiar with Head2Head Golf rules, if not the rules will be given.
+     String ans;
+     boolean Yes = true;
+     boolean No = false;
+     scan = new Scanner(System.in); { 
+			System.out.println("Are you familiar with the rules of Head2Head Golf? Enter Yes or No");
+			ans = scan. nextLine();
+		}
+     if (ans.equals("Yes" )) {
+             Yes = true;
+         } else if (ans.equals("No")) {
+         	System.out.println("The rules are simple. There are a total of 4 teams, But only 2 winners." 
+         + "\n" + "Each team will consist of 2 memebers." + "There will only be two matches."+ "\n" +
+         "Whoever has the lowest score at the end of the match wins." + 
+         "The game can also end with a tie");
+             No = false;
+         } else { 
+             System.out.println("Please relpy using only Yes or No with capital letters");
+         }
+     		System.out.print(System.lineSeparator()); 
+	 
+     		
+     	// Array list for team based states
+     	    ArrayList<String> California = new ArrayList<String>();
+     	    ArrayList<String> NewYork = new ArrayList<String>();
+     	    ArrayList<String> NorthCarolina = new ArrayList<String>();
+     	    ArrayList<String> Florida = new ArrayList<String>();
+     	    
+     	 // Display the size of the ArrayList for Team 2.
+     	    // Team 1 Players.
+     	    System.out.println("From Califronia: ");
+     	    for (int index = 0; index < California.size(); index++)
+     	       System.out.println(California.get(index));	
+     	    
+     	    // Create Player Objects 
+     	    //Team 1
+     	    California.add("James Smith");
+     	    players James = new players(); 
+     		  James.name = "James Smith";
+     		  James.playerID = 5462;
+     		  James.age = 20;
+     		  James.score();
 
-	// Display the size of the ArrayList for Team 3
-	    System.out.println("From North Carolina:");
+     		  
+     	    California.add("Catherine Wells");
+     	    players Catherine = new players(); 
+     		  Catherine.name = "Catherine Wells";
+     		  Catherine.playerID = 3567;
+     		  Catherine.age = 22;
+     		  Catherine.score();
+     		    
+     		  
+     		  // Display the size of the ArrayList for Team 2.
+     		   System.out.println("From New York:");
+     		    for (int index = 0; index < NewYork.size(); index++)
+     		        System.out.println(NewYork.get(index));
+     		    
+     		// Create Player Objects       
+     	    // Team 2 
+     	    NewYork.add("Kevin Jones");
+     	    players Kevin = new players(); 
+     		  Kevin.name = "Kevin Jones";
+     		  Kevin.playerID = 9336;
+     		  Kevin.age = 26;
+     		  Kevin.score();
+    
+     	    NewYork.add("Edward Berry");
+     	    players Ed = new players(); 
+     		  Ed.name = "Edward Berry";
+     		  Ed.playerID = 4778;
+     		  Ed.age = 20;
+     		  Ed.score();
+     		  
 
-	    for (int index = 0; index < NorthCarolina.size(); index++)
-	        System.out.println(NorthCarolina.get(index)); 
-	  
- // Team 3 .
-        NorthCarolina.add("Player 5");
-        players Sarah = new players(); 
-		  Sarah.name = "Sarah Oakley";
-		  Sarah.playerID = 2291;
-		  Sarah.age = 25;
-		  Sarah.score();
-		  Sarah.introduce();
-		  
-      
-        NorthCarolina.add("Player 6");
-        players Joesph = new players(); 
-		  Joesph.name = "Joesph Conner";
-		  Joesph.playerID = 8914;
-		  Joesph.age = 28;
-		  Joesph.score();
-		  Joesph.introduce();
-		  System.out.print(System.lineSeparator()); 
-    
-    
-        { 
-        	
-	//Switch Statements for available team names
+     		// Display the size of the ArrayList for Team 3
+     		    System.out.println("From North Carolina:");
+     		    for (int index = 0; index < NorthCarolina.size(); index++)
+     		        System.out.println(NorthCarolina.get(index)); 
+     		    
+     	// Create Player Objects  
+     	 // Team 3
+     	        NorthCarolina.add("Sarah Oakley");
+     	        players Sarah = new players(); 
+     			  Sarah.name = "Sarah Oakley";
+     			  Sarah.playerID = 2291;
+     			  Sarah.age = 25;
+     			  Sarah.score();
+     			  
+     	        NorthCarolina.add("Joesph Conner");
+     	        players Joesph = new players(); 
+     			  Joesph.name = "Joesph Conner";
+     			  Joesph.playerID = 8914;
+     			  Joesph.age = 28;
+     			  Joesph.score();
+     			  System.out.print(System.lineSeparator());
+     			  
+     			  
+     			 // Display the size of the ArrayList for Team 4
+      		    System.out.println("From Florida:");
+      		    for (int index = 0; index < Florida.size(); index++)
+      		        System.out.println(Florida.get(index)); 
+      		    
+      	// Create Player Objects  
+      	 // Team 4
+      	        Florida.add("Alice Parker");
+      	        players Alice = new players(); 
+      			  Alice.name = "Alice Parker";
+      			  Alice.playerID = 2291;
+      			  Alice.age = 25;
+      			  Alice.score();
+      			  
+      	      
+      	        Florida.add("Victoria Adams");
+      	        players Victoria = new players(); 
+      			  Victoria.name = "Victoria Adams";
+      			  Victoria.playerID = 8914;
+      			  Victoria.age = 28;
+      			  Victoria.score();
+      			  System.out.print(System.lineSeparator()); 
+     	        { 
+     	        	
+     	        }
+     //Shows available team names that you can select 	
+	//Switch Statement for available team names
     switch (teams) {
         case 1:  System.out.println("Badgers");
         case 2:  futureTeams.add("Gophers");
@@ -140,79 +179,82 @@ abstract class Head2HeadGolf {
         for (String teamName : futureTeams) {
             System.out.println(teamName);
         }
-        
-      //Shows available team names that you can select 	
-        System.out.println("Choose name for" + California + " Team 1:");
-        String team1Name = scan.nextLine();
-        team1Name = keyboard.toString();
-        
-        //Player 1 Input Validation conditional Operator 
-        if ((team1Name != ("Whales"))
-                || (team1Name != ("Penguins"))
-                || (team1Name != ("Wolves"))
-                || (team1Name != ("Ducks"))
-                || (team1Name != ("Rhinos"))
-                || (team1Name!= ("Sharks")))
-        	
-        {
-            System.out.println("You can only choose from the availabe teams"); // If team name does not match available you will get this message. 
-        }
-        
-        
-        //Send Back to input
-        System.out.println("Choose name for" + NewYork + "Team 2:");
-        String team2Name = scan.nextLine();
-        team2Name = keyboard.toString();
-        
-        if ((team2Name != ("Whales"))
-                || (team2Name != ("Penguins"))
-                || (team2Name != ("Wolves"))
-                || (team2Name != ("Ducks"))
-                || (team2Name != ("Rhinos"))
-                || (team2Name!= ("Sharks")))
-                {
-                    System.out.println("You can only choose from the availabe teams");
-        }
-        
-      
-        
-        System.out.println("Choose name for Team 3:");
-        String team3Name = scan.nextLine(); //Declare Team 3 Name variable as string 
-        team3Name = keyboard.toString();
-        //Player 2 Input Validation
-        if ((team3Name != ("Whales"))					//Checks to see if user input correct team name
-                || (team3Name != ("Penguins"))
-                || (team3Name != ("Wolves"))
-                || (team3Name != ("Ducks"))
-                || (team3Name != ("Rhinos"))
-                || (team3Name != ("Sharks")))
-                {
-                    System.out.println("You can only choose from the availabe teams"); // If not you will receive this message
-                }
-        			System.out.print(System.lineSeparator());
-     }
-        }
-        // Call Total scores method ... //System.out.println("The raw score is " +
-        								//totalScores()() +
-        								//" points."));  
-        // Calls playerScores from Superclass
-       // playerScores Scores = new  playerScores();
-       // Scores.Score1(score);
-       System.out.print(System.lineSeparator()); 
-        
-      //Calls TeamScore from sub class  
-      //totalScores TeamScore = new totalScores();
-      
-      //Calls avg from totalScores sub class
-       //totalScores Average = new totalScores();
-        //Average.avg();
-        //System.out.print(System.lineSeparator()); 
-        
+    }
+    {
+    	
+    //Shows available team names that you can select 	for Team 1
+    System.out.println("Choose name for" + California + " Team 1:");
+    String team1Name = scan.nextLine();								//Declare Team 3 Name variable as string
+    team1Name = keyboard.toString();
+    if ((team1Name != ("Whales"))									//Checks to see if user input correct team name
+            || (team1Name != ("Penguins"))
+            || (team1Name != ("Wolves"))
+            || (team1Name != ("Ducks"))
+            || (team1Name != ("Rhinos"))
+            || (team1Name!= ("Sharks")))
+    	
+    {
+        System.out.println("You can only choose from the availabe teams"); // If team name does not match available you will get this message.
+        System.out.print(System.lineSeparator());
+    }
+    
+    //Shows available team names that you can select for Team 2
+    System.out.println("Choose name for" + NewYork + "Team 2:");
+    String team2Name = scan.nextLine();							//Declare Team 3 Name variable as string
+    team2Name = keyboard.toString();							
+    if ((team2Name != ("Whales"))								//Checks to see if user input correct team name
+            || (team2Name != ("Penguins"))							
+            || (team2Name != ("Wolves"))
+            || (team2Name != ("Ducks"))
+            || (team2Name != ("Rhinos"))
+            || (team2Name!= ("Sharks")))
+            {
+                System.out.println("You can only choose from the availabe teams");
+                System.out.print(System.lineSeparator());
+    }
+    
+  
+    //Shows available team names that you can select for Team 3
+    System.out.println("Choose name for" + NorthCarolina + "Team 3:");
+    String team3Name = scan.nextLine(); 			//Declare Team 3 Name variable as string 
+    team3Name = keyboard.toString();
+    if ((team3Name != ("Whales"))					//Checks to see if user input correct team name
+            || (team3Name != ("Penguins"))
+            || (team3Name != ("Wolves"))
+            || (team3Name != ("Ducks"))
+            || (team3Name != ("Rhinos"))
+            || (team3Name != ("Sharks")))
+            {
+                System.out.println("You can only choose from the availabe teams"); // If not you will receive this message
+            
+    			System.out.print(System.lineSeparator());
+            }
+    			
+    	//Shows available team names that you can select for Team 4		
+    	System.out.println("Choose name for" + Florida + "Team 4:");
+    	String team4Name = scan.nextLine(); 			//Declare Team 4 Name variable as string 
+    	team4Name = keyboard.toString();
+    	if ((team4Name != ("Whales"))					//Checks to see if user input correct team name
+    			|| (team4Name != ("Penguins"))
+    		    || (team4Name != ("Wolves"))
+    		    || (team4Name != ("Ducks"))
+    		    || (team4Name != ("Rhinos"))
+    		    || (team4Name != ("Sharks")))
+    		    {
+    		        System.out.println("You can only choose from the availabe teams"); // If not you will receive this message
+    		     
+    		    	System.out.print(System.lineSeparator());			
+    		    }
+ }
+    
+      // Displays all Superclass and Subclass methods to be called
        totalScores win = new totalScores();
         win.WinorLose();
         System.out.print(System.lineSeparator());
-        
-    //Exception handling
+	} 
+	{
+		
+    //Exception handling utilizing try and catch
 	try {
 	      int[] t1 = {0};
 	      System.out.println(t1[0]);
@@ -232,14 +274,23 @@ abstract class Head2HeadGolf {
 		    } catch (Exception x) {
 		      System.out.println("Something went wrong.");
 		    }
-	      
-	      
+	      try {
+		      int[] t4 = { 3};
+		      System.out.println(t4[3]);
+		    } catch (Exception w) {
+		      System.out.println("Something went wrong.");
 	      
 	    }
 	 }
-	
-	
-// Method Overriding
+}
+	}	
+protected static String nextLine() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+
+	// Method Overriding created using Eclipse
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
@@ -284,4 +335,3 @@ abstract class Head2HeadGolf {
 		return null;
 		// TODO Auto-generated method stub
 		
-	}
