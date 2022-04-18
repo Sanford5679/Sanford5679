@@ -7,53 +7,69 @@ public class totalScores extends playerScores
    float avg1;
    float avg2;
    float avg3;
+   float avg4;
    
+  
    
    public totalScores()
    {
 	   super();
-			this.Score1 += Score2; //Totals the scores for team one
-			Score1 = keyboard.nextInt(); 
-			Score2 = keyboard.nextInt();
-			System.out.println();
-			System.out.println("The total score for team " + totalScore1 + " was: ");
+	   System.out.println("Round 1:" +Team1 + "vs" +Team2 +"");
+			this.totalScore1 = Score1 += Score2; //Totals the scores for team one
+			System.out.println("The total score for team 1 was: " + this.totalScore1 + "");
 			
-			this.Score3 += Score4; //Totals the scores for team two
-			Score3 = keyboard.nextInt(); 
-			Score4 = keyboard.nextInt();
-			System.out.println();
-			System.out.println("The total score for team " + totalScore2 + " was: ");
+			this.totalScore2 = Score3 += Score4; //Totals the scores for team two
+			System.out.println("The total score for was: " + this.totalScore2+ "");
 			
-			this.Score5 += Score6; //Totals the scores for team three
-			Score5 = keyboard.nextInt(); 
-			Score6 = keyboard.nextInt();
-			System.out.println();
-			System.out.println("The total score for team " + totalScore1 + " was: ");
+			this.totalScore3 = Score5 += Score6; //Totals the scores for team three
+			System.out.println("The total score for team 3 was: " + this.totalScore3 + "");
+			
+			this.totalScore4 = Score7 += Score8; //Totals the scores for team four
+			System.out.println("The total score for team 4 was: " + this.totalScore4 + "");
 	   }   
 	   
-   public double avg()
+  
+   
+   protected void avg()
    {
-	   avg1 = (float) totalScore1/teamSize; //Average score for team one
-		System.out.println();
-		System.out.println("The average score for team 1 " + totalScore1 + " was: " + avg1);
-		return avg1;
-		
-		
+	   avg1 = (float)totalScore1/teamSize; //Average score for team one
+		System.out.println("The average score for team 1 " + avg1 + "");
+	
    }		
-   {	
-	   avg1 = (float) totalScore1/teamSize; //Average score for team one
-		System.out.println();
-		System.out.println("The average score for team 1 was: " + totalScore1 + + avg1);
+   
+   public void WinorLose()
+   {
+   if (totalScore1 < totalScore2) {
+		 System.out.println("Team 1 won the first round!!!");
+		} 
+	else if (totalScore1 > totalScore2){
+		  System.out.println("Team 2 won the first wound!!!");
+	}
+	else if (totalScore1 == totalScore2) {
+		  System.out.println("First round ends with a tie!!!");
+	
+	}	  
+		  
+ if (totalScore3 < totalScore4) {
+		  System.out.println("Team 3 wonthe second round!!!");
+		} 
+	else if (totalScore3 > totalScore4){
+		  System.out.println("Team 4 won with the second round!!!");
+	}
+	else if (totalScore3 == totalScore4) {
+		  System.out.println("Second round ends with a tie!!!");
+	}
+}
+   {
+}
+ 
 	   
-	   avg2 = (float) totalScore2/teamSize; //Average score for team one
-			System.out.println();
-			System.out.println("The average score for team 2 was: " + totalScore2 +  + avg1);
-				
-				
-			avg3 = (float) totalScore3/teamSize; //Average score for team one
-			System.out.println();
-			System.out.println("The average score for team 3 was: " + totalScore3 + + avg1);
-					
+	   
+	   
+	   
+ 		
+   {	
+	   					
 	   }   
 	   
 @Override
@@ -90,7 +106,5 @@ protected void finalize() throws Throwable {
 	super.finalize();
 }
 
-public void Score2(double total) {
-	// TODO Auto-generated method stub
-	
 }
+
