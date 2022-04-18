@@ -11,16 +11,29 @@ public class playerScores
    double Score4;
    double Score5;
    double Score6;
+   double Score7;
+   double Score8;
    
+   
+  double totalScore1;
+  double totalScore2;
+  double totalScore3;
+  double totalScore4;
+   
+  float avg1;
+  float avg2;
+  float avg3;
+  float avg4;
+  
+  
+  
    // Total Team Score Variables 
-   double totalScore1 = Score1 =+ Score2;
-   double totalScore2 = Score3 =+ Score4;
-   double totalScore3 = Score5 =+ Score6;
-   
+  
    
    String Team1;
    String Team2;
    String Team3;
+   String Team4;
    
    final int teamSize = 2;
    
@@ -34,13 +47,13 @@ public playerScores() {
 
    System.out.println("Enter the individual scores for each player of team 1 ");
   
-	for (int player1Score = 1; player1Score < 2; player1Score++) {	
-		System.out.println("Player " + player1Score + " finished with: "); //Asks the user for the scores
+	for (int JamesScore = 1; JamesScore < 2; JamesScore++) {	
+		System.out.println("James " + JamesScore + " finished with: "); //Asks the user for the scores
 		Score1 = keyboard.nextInt(); //input is received here
 		
 	
-		for (int player2Score = 2; player2Score < 3; player2Score++) {
-			System.out.println("Player " + player2Score + " finished with: "); //Asks the user for the scores
+		for (int CatherineScore = 2; CatherineScore< 3; CatherineScore++) {
+			System.out.println("Catherine " + CatherineScore + " finished with: "); //Asks the user for the scores
 			Score2 = keyboard.nextInt(); //input is received here
 			System.out.print(System.lineSeparator());
 			
@@ -63,9 +76,18 @@ public playerScores() {
 						for (int player6Score = 6; player6Score < 7; player6Score++) {
 							System.out.println("Player " + player6Score + " finished with: "); //Asks the user for the scores
 							Score6 = keyboard.nextInt(); //input is received here
-							
+						
+							for (int player7Score = 7; player7Score < 8; player7Score++) {
+								System.out.println("Player " + player7Score + " finished with: "); //Asks the user for the scores
+								Score7 = keyboard.nextInt(); //input is received here
+
+								for (int player8Score = 8; player8Score < 9; player8Score++) {
+									System.out.println("Player " + player8Score + " finished with: "); //Asks the user for the scores
+									Score8 = keyboard.nextInt(); //input is received here
 		
 	
+								}
+							}
 						}
 					}
 				}
@@ -73,9 +95,6 @@ public playerScores() {
 		}
 	}
 }
- 
-
-
 
 @Override
 public int hashCode() {
@@ -116,5 +135,12 @@ public void Score1(double score) {
 }
 
 
+
+
+
+	
 }
+
+
+
 
