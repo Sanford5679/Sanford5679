@@ -1,9 +1,10 @@
 package Golf;
-import java.util.Scanner;
+import java.util.InputMismatchException; //Exception handling import
+import java.util.Scanner; //Scanner
 
 public class playerScores //SuperClass
 {
-   // Player Score Variables 
+  // Player Score Variables inherited by subclass totalScores
    double Score1;
    double Score2;
    double Score3;
@@ -13,67 +14,86 @@ public class playerScores //SuperClass
    double Score7;
    double Score8;
    
-// Team Total Score Static Variables
+   // Team Total Score Static Variables inherited by subclass totalScores
    static double totalScore1;
    static double totalScore2;
    static double totalScore3;
    static double totalScore4;
  
+   // Team Variables 
    String Team1;
    String Team2;
    String Team3;
    String Team4;
    
-    static int teamSize = 2; //Static Variable of TeamSize
+ 
+ 
    
    // Create a Scanner object for keyboard input.
-   Scanner keyboard = new Scanner(System.in);{
-	   
-   }
-   
-public playerScores() { // Constructor playerScores
+   Scanner keyboard = new Scanner(System.in);
 
-	// Allows user to enter score for each individual player 
-   System.out.println("Enter the individual scores for each player of team 1 ");
+   
+public playerScores() { // Constructor for playerScores Class
+
+			// Allows user to enter score for each individual player 
+			System.out.println("Please!! Only input scores as numbers! ");
+			System.out.print(System.lineSeparator());
+			System.out.println("Enter the individual scores for each player of team 1 ");
   
 	for (int JamesScore = 1; JamesScore < 2; JamesScore++) {	
-		System.out.println("James " + JamesScore + " finished with: "); //Asks the user for the scores
-		Score1 = keyboard.nextInt(); //input is received here
-	
+			System.out.println("James " + JamesScore + " finished with: "); //Asks the user for the scores
+		try {										//Exception handling to accept integers only for user input
+			Score1 = keyboard.nextInt(); 
+		} catch(InputMismatchException e) {System.out.println(e);} 
+		
 	for (int CatherineScore = 2; CatherineScore< 3; CatherineScore++) {
-		System.out.println("Catherine " + CatherineScore + " finished with: "); //Asks the user for the scores
-		Score2 = keyboard.nextInt(); //input is received here
-		System.out.print(System.lineSeparator());
+		try {										//Exception handling to accept integers only for user input
+			System.out.println("Catherine " + CatherineScore + " finished with: "); //Asks the user for the scores
+			Score2 = keyboard.nextInt();
+		} catch(InputMismatchException x) {System.out.println(x);}
+	  		System.out.print(System.lineSeparator());
 			
-		System.out.println("Enter the individual scores for each player of team 2 ");	
-	for (int KevinScore = 3; KevinScore < 4; KevinScore++) {
-		System.out.println("Kevin " + KevinScore + " finished with: "); //Asks the user for the scores
-		Score3 = keyboard.nextInt(); //input is received here
-						
+	  		System.out.println("Enter the individual scores for each player of team 2 ");	
+	for (int KevinScore = 3; KevinScore < 4; KevinScore++) {				
+		try {										//Exception handling to accept integers only for user input				
+			System.out.println("Kevin " + KevinScore + " finished with: "); //Asks the user for the scores
+			Score3 = keyboard.nextInt();
+		} catch(InputMismatchException w) {System.out.println(w);}
+		
 	for (int EdwardScore = 4; EdwardScore < 5; EdwardScore++) {
-		System.out.println("Edward " + EdwardScore + " finished with: "); //Asks the user for the scores
-		Score4 = keyboard.nextInt(); //input is received here
-		System.out.print(System.lineSeparator());
+		try {										//Exception handling to accept integers only for user input
+			System.out.println("Edward " + EdwardScore + " finished with: "); //Asks the user for the scores
+			Score4 = keyboard.nextInt(); 
+		} catch(InputMismatchException y) {System.out.println(y);}
+			System.out.print(System.lineSeparator());
 					
-		System.out.println("Enter the individual scores for each player of team 3 ");
+			System.out.println("Enter the individual scores for each player of team 3 ");
 	for (int SarahScore = 5; SarahScore < 6; SarahScore++) {
-		System.out.println("Sarah " + SarahScore + " finished with: "); //Asks the user for the scores
-		Score5 = keyboard.nextInt(); //input is received here
+		try {										//Exception handling to accept integers only for user input
+			System.out.println("Sarah " + SarahScore + " finished with: "); //Asks the user for the scores
+			Score5 = keyboard.nextInt(); 
+		} catch(RuntimeException z) {System.out.println(z);}
 		
 	for (int JoesphScore = 6; JoesphScore < 7; JoesphScore++) {
-		System.out.println("Joesph " + JoesphScore + " finished with: "); //Asks the user for the scores
-		Score6 = keyboard.nextInt(); //input is received here
-		System.out.print(System.lineSeparator());
+		try {										//Exception handling to accept integers only for user input	
+			System.out.println("Joesph " + JoesphScore + " finished with: "); //Asks the user for the scores
+			Score6 = keyboard.nextInt(); 
+		} catch(InputMismatchException k) {System.out.println(k);}
+			System.out.print(System.lineSeparator());
 		
-		System.out.println("Enter the individual scores for each player of team 4 ");					
+			System.out.println("Enter the individual scores for each player of team 4 ");					
 	for (int AliceScore = 7; AliceScore < 8; AliceScore++) {
-		System.out.println(" Alice " + AliceScore + " finished with: "); //Asks the user for the scores
-		Score7 = keyboard.nextInt(); //input is received here
-
+		try {										//Exception handling to accept integers only for user input
+			System.out.println(" Alice " + AliceScore + " finished with: "); //Asks the user for the scores
+			Score7 = keyboard.nextInt(); 
+		} catch(InputMismatchException m) {System.out.println(m);}
+		
 	for (int VictoriaScore = 8; VictoriaScore < 9; VictoriaScore++) {
-		System.out.println(" Victoria " + VictoriaScore + " finished with: "); //Asks the user for the scores
-		Score8 = keyboard.nextInt(); //input is received here
-		System.out.print(System.lineSeparator());
+		try {									//Exception handling to accept integers only for user input
+			System.out.println(" Victoria " + VictoriaScore + " finished with: "); //Asks the user for the scores
+			Score8 = keyboard.nextInt(); 
+		} catch(InputMismatchException l) {System.out.println(l);}
+			System.out.print(System.lineSeparator());
 	
 								}
 							}
@@ -84,7 +104,30 @@ public playerScores() { // Constructor playerScores
 		}
 	}
 }
+{
+	
+}
 
+public static void WinorLose() //Method to get Overridden by Subclass
+{
+	   if (totalScore1 < totalScore2) {
+		 ;
+	} 
+	   else if (totalScore1 > totalScore2){
+		  ;
+	}
+	   else if (totalScore1 == totalScore2) {
+		  System.out.print(System.lineSeparator()); 
+	}	    
+	   if (totalScore3 < totalScore4) {  
+	} 
+	   else if (totalScore3 > totalScore4){	
+	}
+	   else if (totalScore3 == totalScore4) {	    
+	}
+}
+
+//Method Overriding created using Eclipse
 @Override
 public int hashCode() {
 	// TODO Auto-generated method stub
@@ -114,11 +157,6 @@ public void Score1(double score) {
 	// TODO Auto-generated method stub
 	
 }
-
-
-
-
-
 	
 }
 
