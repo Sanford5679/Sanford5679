@@ -1,0 +1,27 @@
+class Contact { // Encapsulation Class
+private String name; //Private Variables, only retrieved through get and set methods
+private String email;
+
+
+//getter method for name 
+public String getName() {
+	return name;
+}
+//setter method for name
+public void setName(String name) {  
+    this.name = name;  // "this" keyword to reference name
+}  
+//getter method for email
+public String getEmail() {
+	return email;
+}
+//setter method for email
+public void setEmail(String email) {  
+    this.email = email;  //"this" keyword to reference email
+}  
+
+	public void Contact() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
