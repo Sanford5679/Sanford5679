@@ -1,32 +1,34 @@
 package Golf;
 import java.awt.geom.Arc2D.Double;
+import java.awt.geom.Arc2D.Float;
 import java.util.Scanner;
 
 public class totalScores extends playerScores //SubClass
 {
-   
-   public totalScores() // Constructor playerScores
+ 
+   public totalScores() // Constructor for totalScores Class
    {
 	   // Gathers the scores for each member of a specific team and adds them to get a totalScore
-	   super();
+	   //Individual Scores are inherited from Superclass playerScores
+	   super(); //SUPER Keyword to call SuperClass 
 	   System.out.println("Match 1:");
-			this.totalScore1 = Score1 += Score2; //Totals the scores for team one
+			this.totalScore1 = Score1 += Score2; //Totals the scores for Team 1 using "this keyword"
 			System.out.println("Total score for Team 1: " + this.totalScore1 + "");
 			
-			this.totalScore2 = Score3 += Score4; //Totals the scores for team two
+			this.totalScore2 = Score3 += Score4; //Totals the scores for Team 2 using "this keyword"
 			System.out.println("Total score for Team 2: " + this.totalScore2+ "");
 			 System.out.print(System.lineSeparator()); 
 			 
 		System.out.println("Match 2:");	 
-			this.totalScore3 = Score5 += Score6; //Totals the scores for team three
+			this.totalScore3 = Score5 += Score6; //Totals the scores for Team 3 using "this keyword"
 			System.out.println("Total score for Team 3: " + this.totalScore3 + "");
 			
-			this.totalScore4 = Score7 += Score8; //Totals the scores for team four
+			this.totalScore4 = Score7 += Score8; //Totals the scores for Team 4 using "this keyword"
 			System.out.println("Total score for Team 4: " + this.totalScore4 + "");
 			System.out.print(System.lineSeparator()); 
 	   }
    
-   
+   									// Method Override
    public static void WinorLose() // WinorLose Static Method takes the totalScores added from the construct and determines the winners.
    {
 	   if (totalScore1 < totalScore2) {
@@ -52,12 +54,12 @@ public class totalScores extends playerScores //SubClass
 		  
 	}
 }
-   
-  {
-}	
+ 
    {	
  }   
-	   
+	
+   
+// Method Overriding created using Eclipse   
 @Override
 public int hashCode() {
 	// TODO Auto-generated method stub
