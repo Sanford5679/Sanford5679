@@ -1,0 +1,6 @@
+package Golf;
+
+public class players { // Only used to for Array list
+
+	public String name;	// Variable for team member names
+	}
